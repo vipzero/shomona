@@ -250,8 +250,3 @@ export const resultTable = {
     B: 2,
   },
 }
-export const lives = [
-  "https://www.twitch.tv/mumei_bk",
-  "http://hebi.5ch.net/test/read.cgi/news4vip/1557032715",
-  "https://www.logsoku.com/r/2ch.sc/news4vip/1557032715/",
-]

@@ -3,10 +3,12 @@ import ReactDOM from "react-dom"
 import _map from "lodash/map"
 import "normalize.css"
 import styled, { createGlobalStyle } from "styled-components"
-import { teams, buttles, resultTable, lives } from "./data"
+import { teams, buttles, resultTable } from "./data"
 
 import { FaHandMiddleFinger, FaWalking, FaArchive } from "react-icons/fa"
-import TeamAImg from "./img/teama.png"
+import TeamAImg from "./img/team-a.jpg"
+import TeamBImg from "./img/team-b.jpg"
+import TeamCImg from "./img/team-c.jpg"
 
 const Global = createGlobalStyle`
 ul {
@@ -200,7 +202,7 @@ function App() {
         <h3>チーム一覧</h3>
         <Members>
           {_map(teams, (team, id) => (
-            <Team key={team.id}>
+            <Team key={id}>
               <h4>{team.id}</h4>
               <h5>{team.name}</h5>
               <ul>
@@ -349,35 +351,51 @@ function App() {
             <figcaption>{teams.A.name}</figcaption>
           </figure>
           <figure style={{ textAlign: "center" }}>
-            <Img src={TeamAImg} style={{ width: "100%" }} />
+            <Img src={TeamBImg} style={{ width: "100%" }} />
             <figcaption>{teams.B.name}</figcaption>
           </figure>
         </div>
         <figure style={{ textAlign: "center" }}>
-          <Img src={TeamAImg} style={{ width: "100%" }} />
+          <Img src={TeamCImg} style={{ width: "100%" }} />
           <figcaption>{teams.C.name}</figcaption>
         </figure>
 
         <h3>配信・スレ情報</h3>
         <ul>
-          {lives.map((url, i) => (
-            <li key={i}>
-              <FaArchive
-                style={{ margin: "3px", verticalAlign: "middle" }}
-                color="orange"
-              />
-              <a
-                className="fa-layers-text"
-                style={{ color: "orange" }}
-                href={url}
-              >
-                {url}
-              </a>
-            </li>
-          ))}
+          <Link
+            name="Twitch配信"
+            url="https://www.twitch.tv/videos/420729710"
+          />
+          <Link
+            name="本スレ"
+            url="http://hebi.5ch.net/test/read.cgi/news4vip/1557032715"
+          />
+          <Link
+            name="ログ速"
+            url="https://www.logsoku.com/r/2ch.sc/news4vip/1557032715/"
+          />
+          <Link name="コード" url="https://github.com/vipzero/shomona" />
         </ul>
       </Content>
     </div>
+  )
+}
+
+function Link({ url, name }) {
+  return (
+    <li>
+      <FaArchive
+        style={{ margin: "3px", verticalAlign: "middle" }}
+        color="orange"
+      />
+      <a
+        className="fa-layers-text"
+        style={{ color: "#e4ba6d", textDecoration: "none" }}
+        href={url}
+      >
+        {name} - {url}
+      </a>
+    </li>
   )
 }
 
