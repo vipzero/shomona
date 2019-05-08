@@ -1,2 +1,0 @@
-# shomona
-Created with CodeSandbox
