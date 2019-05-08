@@ -377,6 +377,7 @@ function App() {
             name="ログ速"
             url="https://www.logsoku.com/r/2ch.sc/news4vip/1557032715/"
           />
+          <Link name="ポスター" url="https://i.imgur.com/G2lHhmY.jpg" />
           <Link name="コード" url="https://github.com/vipzero/shomona" />
         </ul>
       </Content>
