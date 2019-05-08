@@ -24,6 +24,10 @@ h3 {
   text-align: center;
 }
 
+figure {
+  margin: 8px;
+
+}
 
 table {
   border: solid 4px #465d8a;
@@ -127,7 +131,26 @@ const TeamID = styled.div`
 `
 
 const ResultList = styled.div``
-const Img = styled.img``
+const Img = styled.img`
+  width: 100%;
+`
+
+const Prise = styled.div`
+  text-align: center;
+  background: orange;
+  margin: 12px;
+  font-size: 40px;
+  text-shadow: 1px 2px 3px #808080;
+  border-radius: 50px 50px 0 0;
+  padding: 8px;
+  > p:first-child {
+    font-weight: light;
+  }
+  > p:last-child {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+`
 
 function resultText(team1, team2) {
   if (team1 === team2) {
@@ -294,39 +317,19 @@ function App() {
           </tbody>
         </table>
         <h3>ベストしょうもな賞</h3>
-        <div
-          style={{
-            textAlign: "center",
-            background: "orange",
-            margin: "12px",
-            fontSize: "40px",
-            textShadow: "1px 2px 3px #808080",
-            borderRadius: "50px 50px 0 0",
-            padding: "8px",
-          }}
-        >
+        <Prise>
           <p>{"やまおか"}</p>
           <p>{"企画者"}</p>
-        </div>
+        </Prise>
         <h3>ベストガイジ賞</h3>
-        <div
-          style={{
-            textAlign: "center",
-            background: "orange",
-            borderRadius: "50px 50px 0 0",
-            margin: "12px",
-            fontSize: "40px",
-            textShadow: "1px 2px 3px #808080",
-            padding: "8px",
-          }}
-        >
+        <Prise>
           <p>{"ふみん"}</p>
           <p>
             ドラクエやってないぞ
             <br />
             お花摘みに行ってるだけだから！
           </p>
-        </div>
+        </Prise>
         <h3>優勝チーム</h3>
         <div
           style={{
@@ -363,7 +366,7 @@ function App() {
         <h3>配信・スレ情報</h3>
         <ul>
           <Link
-            name="Twitch配信"
+            name="Twitch配信 by むめい"
             url="https://www.twitch.tv/videos/420729710"
           />
           <Link
@@ -393,7 +396,7 @@ function Link({ url, name }) {
         style={{ color: "#e4ba6d", textDecoration: "none" }}
         href={url}
       >
-        {name} - {url}
+        {name}
       </a>
     </li>
   )
