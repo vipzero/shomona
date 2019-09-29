@@ -5,16 +5,16 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "lodash": "4.17.14",
+    "lodash": "4.17.15",
     "normalize.css": "8.0.1",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
     "react-icons": "3.7.0",
     "react-scripts": "2.1.8",
-    "styled-components": "4.3.2"
+    "styled-components": "4.4.0"
   },
   "devDependencies": {
-    "typescript": "3.5.3"
+    "typescript": "3.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
